@@ -1,11 +1,11 @@
 import os
 import sys
 from sqlalchemy import Column, ForeignKey, Integer, String, DateTime
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, declarative_base
 from sqlalchemy import create_engine
-from eralchemy import render_er
+from eralchemy2 import render_er
 from sqlalchemy.sql import func
+
 
 time_created = Column(DateTime(timezone=True), server_default=func.now())
 time_updated = Column(DateTime(timezone=True), onupdate=func.now())
